@@ -11,6 +11,7 @@ namespace GradeBook.GradeBooks
 {
     public class BaseGradeBook
     {
+        public GradeBookType Type { get; set; } 
         public string Name { get; set; }
         public List<Student> Students { get; set; }
 
@@ -267,4 +268,7 @@ namespace GradeBook.GradeBooks
             return JsonConvert.DeserializeObject(json, gradebook);
         }
     }
-}
+    public class StandardGradeBook : BaseGradeBook(name)
+    {
+
+    } 
