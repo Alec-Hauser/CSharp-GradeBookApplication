@@ -11,7 +11,7 @@ namespace GradeBook.GradeBooks
 
     public abstract class BaseGradeBook
     {
-        public bool isWeighted { get; set; }
+        public bool IsWeighted { get; set; }
         public GradeBookType Type { get; set; }
         public string Name { get; set; }
         public List<Student> Students { get; set; }
@@ -19,6 +19,7 @@ namespace GradeBook.GradeBooks
         public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
+            IsWeighted = isWeighted;
             Students = new List<Student>();
         }
 
@@ -127,7 +128,7 @@ namespace GradeBook.GradeBooks
                     gpa = 0;
                     break;
             }
-            if(isWeighted == true && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
+            if(IsWeighted == true && (studentType == StudentType.Honors || studentType == StudentType.DualEnrolled))
             {
                 gpa++;
             }
